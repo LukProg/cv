@@ -1,0 +1,94 @@
+:root {
+    --switch-bg: url(../images/sun.svg);
+    --bg-url: url(../images/bg-mobile-light.jpg);
+    --main-color: black;
+}
+
+.dark-mode {
+    --switch-bg: url(../images/moon-stars.svg);
+    --bg-url: url(../images/bg-mobile.jpg);
+    --main-color: white;
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+/* Dark Mode */
+.dark-mode {
+    color: var(--main-color);
+}
+.dark-mode h2,
+.dark-mode h5,
+.dark-mode p,
+.dark-mode a {
+    color: var(--main-color);
+}
+
+
+/* Light Mode (default) */
+.light-mode {
+  color: var(--main-color);
+}
+
+.bar {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Switch Button */
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 10px auto 0px auto;
+  }
+  
+  #switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg) no-repeat center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .dark-mode #switch button {
+    right: 0;
+    left: initial;
+  }
+  
+  #switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+  }
+
+  li{
+    color: var(--main-color);
+  }
+
+  #social-links {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 24px;
+  }
+  
+  #social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
